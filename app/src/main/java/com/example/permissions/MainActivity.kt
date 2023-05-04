@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
 
         setContentView(R.layout.activity_main)
 
-
-
         btnCamera.setOnClickListener {
             if (checkSelfPermissionCompact(Manifest.permission.CAMERA) ==
                 PackageManager.PERMISSION_GRANTED) {
@@ -74,9 +72,6 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
 
 fun AppCompatActivity.checkSelfPermissionCompact(permission: String) =
     ActivityCompat.checkSelfPermission(this, permission)
-
-fun AppCompatActivity.shouldShownRequestPermissionRationaleCompact(permission: String) =
-    ActivityCompat.shouldShowRequestPermissionRationale(this, permission)
 
 fun AppCompatActivity.requestPermissionCompact(
     permissionArray: Array <String>,
